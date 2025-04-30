@@ -392,16 +392,6 @@ nav a:hover::after
     color: #666;
 }
 
-/* Footer */
-footer
-{
-    padding: 25px 0;
-    text-align: center;
-    background-color: #f9f9f9;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-/* Responsive Improvements */
 @media (max-width: 768px)
 {
     header
