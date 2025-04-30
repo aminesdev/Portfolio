@@ -17,4 +17,4 @@ This is my professional portfolio website showcasing my skills, projects, and ex
 
 ## 🚀 Live Demo
 The portfolio is live at:  
-👉 [https://aminesdev.github.io](https://aminesdev.github.io) *(replace with your actual URL)*
+👉 [https://aminesdev.com](https://aminesdev-jddjmj4lu-aminesdevs-projects.vercel.app/)
