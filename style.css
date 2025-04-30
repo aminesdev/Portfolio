@@ -63,7 +63,9 @@ header p
 /* Navigation */
 nav
 {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -85,6 +87,7 @@ nav li
 
 nav a
 {
+    color: #333;
     font-weight: 500;
     padding: 5px 0;
     position: relative;
@@ -146,12 +149,16 @@ nav a:hover::after
     margin-bottom: 20px;
     transition: var(--transition);
     border: 1px solid #eee;
+
 }
 
 .card:hover
 {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+        /* Slightly less lift on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        border-color: #d0d0d0;
+        /* Slightly darker border on hover */
 }
 
 /* Profile Section */
@@ -429,7 +436,16 @@ footer
 
     .card
     {
-        padding: 18px;
+        background-color: #fafafa;
+            /* Light gray background */
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            /* Softer shadow */
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            border: 1px solid #e0e0e0;
+            /* Light gray border */
     }
 
     .contact-info p
