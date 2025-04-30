@@ -1,4 +1,4 @@
-# Mohamed Amine Boughaba - Portfolio Website
+#Portfolio Website
 ## 🌟 About
 This is my professional portfolio website showcasing my skills, projects, and experience as a Computer Science student and Software Engineer. The site features:
 
