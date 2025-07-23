@@ -58,3 +58,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Add scroll optimization
+let isScrolling;
+window.addEventListener('scroll', function() {
+    document.body.classList.add('is-scrolling');
+    clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+        document.body.classList.remove('is-scrolling');
+    }, 100);
+}, { passive: true }); // Important for performance
+
+// Simplify scroll listener for active nav
+const updateActiveNav = () => {
+    const scrollPos = window.scrollY + 100;
+    document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const link = document.querySelector(`.nav-link[data-section="${section.id}"]`);
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            link?.classList.add('active');
+        } else {
+            link?.classList.remove('active');
+        }
+    });
+};
+
+// Throttle scroll events
+window.addEventListener('scroll', throttle(updateActiveNav, 100), { passive: true });
+
+function throttle(fn, wait) {
+    let lastTime = 0;
+    return function() {
+        const now = Date.now();
+        if (now - lastTime >= wait) {
+            fn.apply(this, arguments);
+            lastTime = now;
+        }
+    };
+}

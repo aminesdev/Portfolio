@@ -229,3 +229,25 @@ nav {
     top: calc(100% + 10px); /* Position below the 50px nav */
 }
 
+/* Hardware acceleration for smooth scrolling */
+html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Reduce heavy effects during scroll */
+body {
+    overscroll-behavior-y: contain;
+}
+
+/* Simplify animations during scroll */
+* {
+    scrollbar-width: none; /* For Firefox */
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Disable animations when scrolling */
+.is-scrolling * {
+    animation: none !important;
+    transition: none !important;
+}
