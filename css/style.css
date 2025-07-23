@@ -218,7 +218,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 8px 16px; /* Adjusted padding */
-    border-radius: 9px;
+    border-radius: px;
     transition: all 0.3s ease;
     color: white;
     height: 100%; /* Take full height of nav */
@@ -227,27 +227,4 @@ nav {
 /* Adjust tooltip positioning */
 .nav-tooltip {
     top: calc(100% + 10px); /* Position below the 50px nav */
-}
-
-/* Hardware acceleration for smooth scrolling */
-html {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-}
-
-/* Reduce heavy effects during scroll */
-body {
-    overscroll-behavior-y: contain;
-}
-
-/* Simplify animations during scroll */
-* {
-    scrollbar-width: none; /* For Firefox */
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Disable animations when scrolling */
-.is-scrolling * {
-    animation: none !important;
-    transition: none !important;
 }
