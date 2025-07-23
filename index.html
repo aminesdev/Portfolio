@@ -1,200 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Amine Boughaba | Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: 'black',
+                        darkcard: '',
+                        accent: 'white'
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <header>
-        <div class="container">
-            <h1>Mohamed Amine Boughaba</h1>
-            <p>Computer Science Student | Software Engineer</p>
-        </div>
-    </header>
+<body class="bg-darkbg text-white">
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                
-            </ul>
+    <!-- Top Navigation -->
+    <nav class="fixed mt-3 top-0 left-1/2 transform -translate-x-1/2 z-50 bg-darkcard/80 backdrop-blur-lg border border-white/10 rounded-xl h-[50px] flex items-center">
+        <div class="flex items-center justify-center space-x-2 px-4">
+            <a href="#work" class="nav-dock-link">
+                <i class="fas fa-briefcase text-lg"></i>
+                <span class="nav-tooltip">Work</span>
+            </a>
+            <a href="#about" class="nav-dock-link">
+                <i class="fas fa-user text-lg"></i>
+                <span class="nav-tooltip">About</span>
+            </a>
+            <a href="#contact" class="nav-dock-link">
+                <i class="fas fa-envelope text-lg"></i>
+                <span class="nav-tooltip">Contact</span>
+            </a>
         </div>
     </nav>
 
-    <section id="profile" class="section">
-        <div class="container">
-            <h2>Profile</h2>
-            <div class="card">
-                <div class="profile-content">
-                    <ul>
-                        <li>Passionate computer science student with demonstrated expertise in full-stack development
-                        </li>
-                        <li>Proven ability to design and implement complex software systems in .NET and Java ecosystems
-                        </li>
-                        <li>Committed to writing clean, maintainable code following best practices</li>
-                        <li>Active open-source contributor with strong collaborative skills</li>
-                    </ul>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-32 pb-20 flex items-center border-b border-white/10 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Mohamed Amine Boughaba</h1>
+            <p class="text-2xl md:text-3xl mb-8">Software Engineer</p>
+            
+            <div class="max-w-2xl mx-auto"> 
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12">
+                    <a href="#work" 
+                    class="cta-primary px-8 py-3 rounded-full font-semibold transition-all duration-300">
+                    View My Work
+                    </a>
+                    <a href="#contact" 
+                    class="cta-secondary px-8 py-3 rounded-full font-semibold transition-all duration-300 border border-white/20">
+                    Hire Me
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 border-b border-white/10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold">BookStore (ASP.NET MVC)</h3>
+                                <i class="fas fa-book text-gray-400 text-xl"></i>
+                            </div>
+                            <p class="text-gray-400 mb-4">Dynamic web application for browsing and managing books with secure user authentication.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">C#</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">ASP.NET</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <a href="https://github.com/aminesdev/BookStore" target="_blank" class="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg">
+                                View on GitHub <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold">GameCatalogAPI (RESTful API)</h3>
+                                <i class="fas fa-gamepad text-gray-400 text-xl"></i>
+                            </div>
+                            <p class="text-gray-400 mb-4">Production-ready API for game catalog management with comprehensive documentation.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">C#</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">.NET Core</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Swagger</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <a href="https://github.com/aminesdev/GameCatalogAPI" target="_blank" class="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg">
+                                View on GitHub <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold">ProjectManager (Java)</h3>
+                                <i class="fas fa-tasks text-gray-400 text-xl"></i>
+                            </div>
+                            <p class="text-gray-400 mb-4">Comprehensive task management solution for development teams with intuitive UI.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Java</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Swing</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">OOP</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <a href="https://github.com/aminesdev/ProjectManager" target="_blank" class="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg">
+                                View on GitHub <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-bold">NetworkSimulation (Java MVC)</h3>
+                                <i class="fas fa-network-wired text-gray-400 text-xl"></i>
+                            </div>
+                            <p class="text-gray-400 mb-4">Advanced network behavior simulation with visualization of core networking algorithms.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Java</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">MVC</span>
+                                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Data Structures</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <a href="https://github.com/aminesdev/NetworkSimulation" target="_blank" class="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg">
+                                View on GitHub <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="card project-card">
-                    <h3>BookStore (ASP.NET MVC)</h3>
-                    <p>Dynamic web application for browsing and managing books with secure user authentication and
-                        role-based access control.</p>
-                    <div class="tech-tags">
-                        <span>C#</span>
-                        <span>ASP.NET MVC</span>
-                        <span>Entity Framework</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <a target="_blank" href="https://github.com/aminesdev/BookStore" class="project-link">View on GitHub <i
-                            class="fab fa-github"></i></a>
+    <!-- About Section -->
+    <section id="about" class="py-20 border-b border-white/10">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-16 glass-effect rounded-xl p-8">
+                <div class=" overflow-hidden ">
+                    <img src="assets/profile.png" alt="Mohamed Amine Boughaba" class="w-full h-full object-cover">
                 </div>
-                <div class="card project-card">
-                    <h3>GameCatalogAPI (RESTful API)</h3>
-                    <p>Production-ready API for game catalog management with comprehensive documentation using
-                        Swagger/OpenAPI.</p>
-                    <div class="tech-tags">
-                        <span>C#</span>
-                        <span>.NET Core</span>
-                        <span>Entity Framework</span>
-                        <span>PostgreSQL</span>
-                        <span>Swagger</span>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <p class="text-lg mb-6">Computer science student with expertise in full-stack development and system architecture. Passionate about building efficient, scalable software solutions.</p>
+                    <div class="flex space-x-6">
+                        <a href="https://github.com/aminesdev" class="text-2xl hover:text-accent"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-amine-boughaba" class="text-2xl hover:text-accent"><i class="fab fa-linkedin"></i></a>
                     </div>
-                    <a target="_blank" href="https://github.com/aminesdev/GameCatalogAPI" class="project-link">View on GitHub <i
-                            class="fab fa-github"></i></a>
                 </div>
-                <div class="card project-card">
-                    <h3>ProjectManager (Java)</h3>
-                    <p>Comprehensive task management solution for development teams with intuitive UI and progress
-                        visualization.</p>
-                    <div class="tech-tags">
-                        <span>Java</span>
-                        <span>Swing</span>
-                        <span>OOP</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Education</h3>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Software Engineering</h4>
+                        <p class="text-gray-400">Université Abdelhamid Mehri</p>
+                        <p class="text-gray-400">2023 - Present</p>
                     </div>
-                    <a target="_blank" href="https://github.com/aminesdev/ProjectManager" class="project-link">View on GitHub <i
-                            class="fab fa-github"></i></a>
                 </div>
-                <div class="card project-card">
-                    <h3>NetworkSimulation (Java MVC)</h3>
-                    <p>Advanced network behavior simulation with visualization of core networking algorithms and data
-                        structures.</p>
-                    <div class="tech-tags">
-                        <span>Java</span>
-                        <span>MVC</span>
-                        <span>Swing</span>
-                        <span>Data Structures</span>
+
+                <div class="glass-effect rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Skills</h3>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Languages</h4>
+                        <p class="text-gray-400">C, Java, JavaScript</p>
+                        <h4 class="font-semibold mt-3">Frameworks</h4>
+                        <p class="text-gray-400">ReactJS, TailwindCSS, ExpressJS, NextJS</p>
                     </div>
-                    <a target="_blank"  href="https://github.com/aminesdev/NetworkSimulation" class="project-link">View on GitHub <i
-                            class="fab fa-github"></i></a>
+                </div>
+
+                <div class="glass-effect rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Database</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-400">MongoDB</p>
+                        <p class="text-gray-400">PostgreSQL</p>
+                        <p class="text-gray-400">MySQL</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="card">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>C</li>
-                        <li>Java</li>
-                        <li>C#</li>
-                    </ul>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6 max-w-2xl text-center">
+            <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
+            <div class="space-y-4 mb-8">
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-envelope mr-3 text-accent"></i>
+                    <a href="mailto:mohamedamine.the.dev@gmail.com">mohamedamine.the.dev@gmail.com</a>
                 </div>
-                <div class="card">
-                    <h3>Web Development</h3>
-                    <ul>
-                        <li>ASP.NET MVC</li>
-                        <li>.NET Core</li>
-                        <li>HTML5/CSS3</li>
-                        <li>Bootstrap</li>
-                        <li>REST APIs</li>
-                    </ul>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-phone mr-3 text-accent"></i>
+                    <a href="tel:+213559226304">+213 559 226 304</a>
                 </div>
-                <div class="card">
-                    <h3>Database Systems</h3>
-                    <ul>
-                        <li>PostgreSQL</li>
-                        <li>Entity Framework</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Development Tools</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>VS Code</li>
-                        <li>Visual Studio</li>
-                        <li>Linux</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Software Methodologies</h3>
-                    <ul>
-                        <li>OOP</li>
-                        <li>MVC</li>
-                        <li>Agile Development</li>
-                        <li>REST APIs</li>
-                    </ul>
-                </div>
+            </div>
+            <div class="mb-16">
+                <a href="assets/cv.pdf" class="cta-primary px-8 py-3 rounded-full font-semibold text-black font-medium mb-8 transition-all mb-8 duration-300">
+                    Download CV
+                </a>
+            </div>
+            <div class="flex justify-center space-x-6 cta-secondary px-8 py-3 rounded-xl font-semibold transition-all duration-300 border border-white/20">
+                <a href="https://github.com/aminesdev" class="text-2xl hover:text-accent"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mohamed-amine-boughaba" class="text-2xl hover:text-accent"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="card">
-                <div class="education-item">
-                    <h3>Bachelor of Science in Computer Science</h3>
-                    <p class="institution">Université Abdelhamid Mehri - Constantine 2, Algeria | 2023 - Present</p>
-                </div>
-            </div>
+    <footer class="py-8 bg-darkcard border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Mohamed Amine Boughaba. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="card">
-                <div class="contact-content">
-                    <p>Open to software engineering internships and research collaborations</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> mohamedamine.the.dev@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> +213 559 226 304</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Mila, Algeria</p>
-                    </div>
-                    <div class="cv-download">
-                        <a href="cv.pdf" target="_blank" download class="download-cv">Download CV</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/aminesdev"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/mohamed-amine-boughaba"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <p class="update-date">Last Updated: April 30, 2025</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
